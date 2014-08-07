@@ -3,5 +3,5 @@ goatee.js
 
 Client library for the [goatee](https://github.com/johnernaut/goatee) notification server.
 
-## Building
+### Building
 `npm install && grunt`
