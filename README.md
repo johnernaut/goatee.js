@@ -67,6 +67,8 @@ Use `bind` to bind to as many channels as needed.  Once bound, you can send cust
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="./js/goatee.js"></script>
   <script>
+    // note: this token is just a placeholder for now - any value
+    // will do.
     var gt = new goatee("ABC123LOLDU", "ws://localhost:1235/");
     
     // bind / listen to as many channels as needed.
