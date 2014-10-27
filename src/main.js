@@ -25,7 +25,7 @@
     });
 
     this.connection.bind('closed', function() {
-      console.warn("Connection to the goatee server was closed.")
+      console.warn("Connection to the goatee server was closed.");
     });
 
     this.connect();
