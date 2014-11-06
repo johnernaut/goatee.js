@@ -28,7 +28,7 @@
       console.warn("Connection to the goatee server was closed.")
     });
 
-    this.connect();
+    this.connect(key);
   }
 
   var prototype = goatee.prototype;
@@ -47,8 +47,8 @@
     return this;
   };
 
-  prototype.connect = function() {
-    this.connection.connect();
+  prototype.connect = function(key) {
+    this.connection.connect(key);
   };
 
   function validateKey(key) {

@@ -12,12 +12,12 @@
   var prototype = ConnectionManager.prototype;
   goatee.Utils.extend(prototype, goatee.CommandDispatcher.prototype);
 
-  prototype.connect = function() {
+  prototype.connect = function(key) {
     var self = this;
     var compatible = this.checkCompatibility();
 
     if (compatible) {
-      this.connection = new WebSocket(this.url);
+      this.connection = new WebSocket(this.url + "?api_key=" + key);
       this.connection.onopen = function() { self.onOpen(); };
       this.connection.onmessage = function(data) { self.onMessage(data); };
       this.connection.onerror = function(err) { self.onError(err); };
