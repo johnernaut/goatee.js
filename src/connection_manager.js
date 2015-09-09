@@ -64,15 +64,15 @@
       return;
     }
 
-    var data = {
+    var extended_data = {
       channel: name,
       payload: data,
       action: 'message',
       token: 'ABC123'
     };
 
-    this.connection.send(JSON.stringify(data));
-  }
+    this.connection.send(JSON.stringify(extended_data));
+  };
 
   // used to make sure there's a connection before a send is made
   prototype.waitForConnection = function(callback) {
@@ -92,7 +92,7 @@
 
   prototype.checkCompatibility = function() {
     if (window.WebSocket === undefined) {
-      this.emit('error', "WebSockets aren't supported on this browser.")
+      this.emit('error', "WebSockets aren't supported on this browser.");
       return false;
     }
 
